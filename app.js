@@ -39,6 +39,9 @@ function display() {
     ans.style.display = 'block';
 
     setInterval(() => {
+        let newTitle = document.getElementById('mainTitle');
+        newTitle.innerHTML = 'Encrypt and Decrypt messages';
+        newTitle.style.marginLeft = '0';
         const content = document.getElementById('rContent');
         content.style.display = 'block';
         ans.style.display = "none";
