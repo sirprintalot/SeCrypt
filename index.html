@@ -18,7 +18,7 @@
 <body>
     <header>
         <img class="header_img" src="images/Secrypt/Secrypt_Logo_Horizontal_Verde.png">
-        <h1 class="header-title">Encrypt and Decrypt messages</h1>
+        <h1 id="mainTitle" class="header-title">Encrypt and Decrypt messages</h1>
     </header>
     <main>
         <section>
@@ -28,10 +28,12 @@
                 </div>
 
                 <div class="text_container_2">
-                    <img class="warning-img" src="images/Daco_4714818.png">
-                    <h1 class="warning-msg">No message found!</h1>
-                    <p class="warning-desc">Enter the message that you want to encrypt or decrypt</p>
-                </div>
+                    <textarea id="finalMessage" class="textArea2"></textarea>
+                    <div id="rContent" class="rightContent">
+                        <img class="warning-img" src="images/Daco_4714818.png">
+                        <h1 class="warning-msg">No message found!</h1>
+                        <p class="warning-desc">Enter the message that you want to encrypt or decrypt</p>
+                    </div>
             </div>
         </section>
 
@@ -47,12 +49,12 @@
             </div>
             <div class="bot-wrapper">
                 <div class="bot-wrappwer-left">
-                                    <button class="btn1" type="button" onclick="">Encrypt</button>
-                    <button class="btn2">Decrypt</button>
+                                    <button id="encBtn" class="btn1" type="button" onclick="">Encrypt</button>
+                    <button id="decBtn" class="btn2">Decrypt</button>
                 </div>
 
                 <div class="bot-wrapper-right">
-                    <button class="btn3">Copy</button>
+                    <button id="copyBtn" class="btn3">Copy</button>
                 </div>
             </div>
         </section>
@@ -64,5 +66,5 @@
         </div>
     </footer>
 </body>
-
+<script src="/app.js"></script>
 </html>
