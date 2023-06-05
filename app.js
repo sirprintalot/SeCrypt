@@ -1,5 +1,10 @@
-// ENCRYPTING THE MESSAGE
+window.addEventListener('load', () => {
+    console.log("LOAD COMPLETE")
+})
 
+
+
+// ENCRYPTING THE MESSAGE
 const encryptButton = document.getElementById('encBtn');
 encryptButton.addEventListener('click', () => {
     let message = document.getElementById('message').value;
@@ -22,14 +27,14 @@ function encrypt(txt) {
 }
 
 function updateTitle() {
-    const title = document.getElementById('mainTitle')
-    title.style.marginLeft = '170px';
+    const title = document.getElementById('mainTitle');
+    title.style.marginLeft = '250px';
     title.innerHTML = "Text Encrypted";
 }
 
 function updateTitleDec() {
     const title2 = document.getElementById('mainTitle')
-    title2.style.marginLeft = '180px';
+    title2.style.marginLeft = '250px';
     title2.innerHTML = "Text decrypted";
 }
 
@@ -39,14 +44,6 @@ function display() {
     ans.style.display = 'block';
 
     setInterval(() => {
-        // let txtarea = document.getElementById('message');
-        // txtarea.value = "";
-        // let newTitle = document.getElementById('mainTitle');
-        // newTitle.innerHTML = 'Encrypt and Decrypt messages';
-        // newTitle.style.marginLeft = '0';
-        // const content = document.getElementById('rContent');
-        // content.style.display = 'block';
-        // ans.style.display = "none";
         document.location.reload();
     }, 10000);
 }
@@ -84,7 +81,9 @@ copyBtn.addEventListener('click', () => {
     copyText.select();
     copyText.setSelectionRange(0, 99999);
     navigator.clipboard.writeText(copyText.value);
-
-})
+    copyText.value = "";
+}
+    
+)
 
 // PAGE INIT
